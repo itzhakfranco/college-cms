@@ -1,0 +1,60 @@
+{
+	"lecturers": [
+		{
+			"id": "10",
+			"name": "Moshe",
+			"email": "moshe@moshe.com",
+			"languages": [101, 103]
+		},
+		{
+			"id": "20",
+			"name": "Avi",
+			"email": "avi@moshe.com",
+			"languages": [103]
+		},
+		{
+			"id": "300",
+			"name": "Gila",
+			"email": "gila@moshe.com",
+			"languages": [102, 104, 107]
+		}
+	],
+	"Languages": [
+		{
+			"id": 101,
+			"name": "Java"
+		},
+		{
+			"id": 102,
+			"name": ".NET"
+		},
+		{
+			"id": 103,
+			"name": "NodeJS"
+		},
+		{
+			"id": 104,
+			"name": "Advanced Vanilla JS"
+		},
+		{
+			"id": 105,
+			"name": "React"
+		},
+		{
+			"id": 106,
+			"name": "Angular"
+		},
+		{
+			"id": 107,
+			"name": "Kotlin"
+		},
+		{
+			"id": 108,
+			"name": "Dart"
+		},
+		{
+			"id": 109,
+			"name": "Flutter"
+		}
+	]
+}
