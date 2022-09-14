@@ -19,7 +19,7 @@
 			"languages": [102, 104, 107]
 		}
 	],
-	"Languages": [
+	"languages": [
 		{
 			"id": 101,
 			"name": "Java"

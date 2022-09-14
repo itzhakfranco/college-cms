@@ -1,24 +1,17 @@
-
-const Navbar = () => {
-	return (
-		<nav className='navbar navbar-expand-lg navbar-light shadow-sm'>
-			<div className='container'>
-				<div className='navbar-brand'>
-					Lecturers CMS
-				</div>
-				<button
-					className='navbar-toggler'
-					type='button'
-					data-toggle='collapse'
-					data-target='#navbarSupportedContent'
-				>
-					<span className='navbar-toggler-icon'></span>
-				</button>
-
-			
-			</div>
-		</nav>
-	);
+const Navbar = ({ title }) => {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light shadow-sm">
+      <div className="container">
+        <div className="navbar-brand">{title}</div>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+        ></button>
+      </div>
+    </nav>
+  );
 };
 
-export default Navbar
+export default Navbar;

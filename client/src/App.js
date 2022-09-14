@@ -4,11 +4,11 @@ import Navbar from "./components/ui/Navbar";
 function App() {
   return (
     <>
-      <header>
-        <Navbar />
+      <header >
+        <Navbar title="Lecturers CMS" />
       </header>
       <main>
-        <LecturersPage />
+        <LecturersPage  />
       </main>
     </>
   );
