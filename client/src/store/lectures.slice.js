@@ -10,8 +10,8 @@ export const fetchLecturers = createAsyncThunk(
 );
 const initialState = {
 	lecturers: [],
-	languages: {},
-	languagesHash: {},
+	languagesByIdHash: {},
+	lecturersByLanguageHash: {},
 	loading: "",
 };
 
@@ -34,24 +34,22 @@ export const lecturesSlice = createSlice({
 	extraReducers: (builder) => {
 		builder
 			.addCase(fetchLecturers.fulfilled, (state, action) => {
-        
-				const languagesHash = mapArrayToHash(action.payload.languages);
+				const languagesByIdHash = mapArrayToHash(action.payload.languages);
 				const lecturers = action.payload.lecturers;
 
-				state.loading = "success";
 				state.lecturers = lecturers;
-				state.languages = languagesHash;
+				state.languagesByIdHash = languagesByIdHash;
 
-				state.languagesHash = Object.entries(languagesHash).reduce(
-					(languagesHash, [id, lang]) => {
-						languagesHash[lang] = lecturers.filter((lecturer) =>
-							lecturer.languages.includes(Number(id))
-						);
+				state.lecturersByLanguageHash = Object.entries(
+					languagesByIdHash
+				).reduce((languagesHash, [id, lang]) => {
+					languagesHash[lang] = lecturers.filter((lecturer) =>
+						lecturer.languages.includes(Number(id))
+					);
 
-						return languagesHash;
-					},
-					{}
-				);
+					return languagesHash;
+				}, {});
+				state.loading = "success";
 			})
 			.addCase(fetchLecturers.rejected, (state, action) => {
 				state.loading = "failed";
