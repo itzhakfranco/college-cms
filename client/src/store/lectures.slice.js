@@ -44,8 +44,8 @@ export const lecturesSlice = createSlice({
 
 				state.languagesHash = Object.entries(languagesHash).reduce(
 					(languagesHash, [id, lang]) => {
-						languagesHash[lang] = lecturers.filter((teacher) =>
-							teacher.languages.includes(Number(id))
+						languagesHash[lang] = lecturers.filter((lecturer) =>
+							lecturer.languages.includes(Number(id))
 						);
 
 						return languagesHash;
